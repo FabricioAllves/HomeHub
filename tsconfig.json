@@ -5,14 +5,15 @@
     "baseUrl": "./",
     "paths": {
       "@assets/*": ["./src/assets"],
-      "@components/*": ["src/components"],
+      "@components": ["src/components"],
       "@screens": ["src/screens"],
       "@models/*": ["./src/models"],
       "@routes/*": ["./src/routes"],
       "@services/*": ["./src/services"],
       "@store/*": [ "./src/store"],
       "@utils/*": ["./src/utils"],
-      "@theme": ["src/theme"]
+      "@theme": ["src/theme"],
+      "@hooks": ["src/hooks"]
     }
   },
   "include": [
