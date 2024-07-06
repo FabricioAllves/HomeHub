@@ -1,6 +1,6 @@
 import React from 'react'
 import { useFonts, Inter_700Bold, Inter_500Medium, Inter_600SemiBold } from '@expo-google-fonts/inter';
-import { HomeScreen } from '@screens'
+import { CategoriesScreen, HomeScreen } from '@screens'
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 export default function App() {
@@ -14,7 +14,7 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
-      <HomeScreen/>
+      <CategoriesScreen/>
     </SafeAreaProvider>
   );
 }

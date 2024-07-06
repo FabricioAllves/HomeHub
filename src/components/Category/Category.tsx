@@ -14,7 +14,7 @@ export function Category({ name, size = 'medium' }: IconDataProps) {
       <View style={[styles.circle,
       {
         height: size === 'medium' ? 54 : 78,
-        width: size === 'medium' ? 54 : 78
+        width: size === 'medium' ? 54 : 78,
       }
       ]}>
         <Icon name={name} />
@@ -31,10 +31,10 @@ const styles = StyleSheet.create({
     gap: theme.spacing.s12
   },
   circle: {
-    borderRadius: 29,
     backgroundColor: theme.colors.green_100,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    borderRadius: 100
   },
   textCategory: {
     fontFamily: theme.font.regular,
