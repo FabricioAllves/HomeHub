@@ -7,7 +7,7 @@ import { useAppSafeArea } from '@hooks';
 
 import { theme } from '@theme';
 import { ScrollViewContainer, ViewContainer } from './components/ScreeenContainer';
-import { Header } from '../Header/Header';
+import { Header } from '../Headers/Header';
 
 interface ScreenProps {
   children: React.ReactNode;
