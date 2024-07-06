@@ -1,10 +1,20 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { Screen } from "@components";
 
-export function HomeScreen(){
-  return(
-    <View>
-      <Text>fjanfakjrf</Text>
-    </View>
+import {
+  Search,
+  Offers,
+  ServiceCategories,
+  FeaturedServices
+} from "./components";
+
+export function HomeScreen() {
+  return (
+    <Screen scrollable>
+      <Search />
+      <Offers />
+      <ServiceCategories />
+      <FeaturedServices />
+    </Screen>
   )
 }

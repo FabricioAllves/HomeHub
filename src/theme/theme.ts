@@ -11,8 +11,19 @@ export const theme = {
     pink_100: '#F8B0ED',
 		red_100: '#FB9B9B',
 
+		purple: '#6759FF',
+
 		black_100: '#172B4D',
-		black_200: '#41405D'
+		black_200: '#41405D',
+		black_300: '#666C89',
+
+		gray_50: '#6F767E',
+		gray_100: '#9B9E9F',
+		gray_200: '#EFEFEF',
+
+		white_200: '#FBFBFB',
+		background: '#f3f3f3',
+		backgroundPrimary: '#FFFFFF'
 	},
 
 	fontSize: {
@@ -31,6 +42,9 @@ export const theme = {
     s8: 8,
     s10: 10,
     s12: 12,
+		s16: 16,
+		s20: 20,
+		s24: 24,
   },
 
   borderRadius: {
