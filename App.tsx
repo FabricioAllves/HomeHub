@@ -1,7 +1,14 @@
+import 'react-native-gesture-handler';
 import React from 'react'
-import { useFonts, Inter_700Bold, Inter_500Medium, Inter_600SemiBold } from '@expo-google-fonts/inter';
-import { CategoriesScreen, HomeScreen, ServicesScreen } from '@screens'
+import {
+  useFonts,
+  Inter_700Bold,
+  Inter_500Medium,
+  Inter_600SemiBold
+} from '@expo-google-fonts/inter';
+
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { Routes } from '@routes/index';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -14,7 +21,7 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
-      <ServicesScreen/>
+      <Routes />
     </SafeAreaProvider>
   );
 }
