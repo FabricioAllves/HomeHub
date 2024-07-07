@@ -13,10 +13,13 @@ export const theme = {
 
 		purple: '#6759FF',
 
+
+		black_50: '#1A1D1F',
 		black_100: '#172B4D',
 		black_200: '#41405D',
 		black_300: '#666C89',
 
+		gray: '#9A9FA5',
 		gray_50: '#6F767E',
 		gray_100: '#9B9E9F',
 		gray_200: '#EFEFEF',

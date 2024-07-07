@@ -24,11 +24,11 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     borderWidth: 1.5,
     borderColor: theme.colors.gray_200,
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   description: {
     color: theme.colors.gray_50,
     fontSize: theme.fontSize.paragraph,
-    fontFamily: theme.font.semiBold
+    fontFamily: theme.font.semiBold,
   }
 })

@@ -23,8 +23,8 @@ export function CategoriesScreen() {
         <FlatList
           data={categoriesData}
           keyExtractor={(item) => item.id.toString()}
-          numColumns={3} // 3 columns
-          columnWrapperStyle={styles.columnWrapper} // Style for column spacing
+          numColumns={3} 
+          columnWrapperStyle={styles.columnWrapper}
           renderItem={({ item }) => (
             <Category key={item.id} size="large" name={"AcRepair"} />
           )}
