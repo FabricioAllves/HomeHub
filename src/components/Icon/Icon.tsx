@@ -5,6 +5,7 @@ import {SearchIcon} from '../../assets/icons/SearchIcon';
 import { ArrowLeftIcon } from 'src/assets/icons/ArrowLeftIcon';
 import { AcRepairIcon } from 'src/assets/icons/AcRepairIcon';
 import { ChevronRightIcon } from 'src/assets/icons/CheveronRightIcon';
+import { MoreHorizontalIcon } from 'src/assets/icons/MoreHorizontal';
 
 export interface IconBase {
   size?: number;
@@ -38,7 +39,8 @@ const iconRegistry = {
   Search: SearchIcon,
   ArrowLeft: ArrowLeftIcon,
   AcRepair: AcRepairIcon,
-  ChevronRight: ChevronRightIcon
+  ChevronRight: ChevronRightIcon,
+  MoreHorizontal: MoreHorizontalIcon
 };
 
 type IconType = typeof iconRegistry;
