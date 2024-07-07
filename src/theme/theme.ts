@@ -63,3 +63,6 @@ export const theme = {
 		bold: 'Inter_700Bold',
 	},
 };
+
+export type Theme = typeof theme;
+export type ThemeColors = keyof Theme['colors'];

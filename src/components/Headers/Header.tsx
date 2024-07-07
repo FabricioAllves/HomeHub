@@ -14,7 +14,7 @@ export function Header() {
         canBack
         placeholder="Search what you need..."
         rightComponent={
-          <Icon name="Search" />
+          <Icon name="Search" color="white_200" size={14} />
         }
       />
     </View>
