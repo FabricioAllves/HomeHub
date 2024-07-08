@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import { theme } from '@theme'
 import { Icon } from '../Icon/Icon';
+import { useNavigation } from '@react-navigation/native'
 
 export interface TextInputProps extends RNTextInputProps {
   rightComponent?: React.ReactElement;
@@ -25,13 +26,15 @@ export function SearchInput({
     inputRef.current?.focus();
   }
 
+  const {goBack} = useNavigation();
+
   return (
     <View style={styles.container}>
       <Pressable onPress={focusInput} style={styles.pressable}>
         <View style={styles.inputContainer}>
           {canBack && (
             <View style={styles.leftComponent}>
-              <Icon name='ArrowLeft' />
+              <Icon name='ArrowLeft' onPress={goBack} />
             </View>
           )}
           <TextInput

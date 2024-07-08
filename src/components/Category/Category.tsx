@@ -1,25 +1,28 @@
 import { theme } from "@theme";
 import React from "react";
-import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
-import { Icon } from "../Icon/Icon";
+import { View, StyleSheet, Text, TouchableOpacity,TouchableOpacityProps } from "react-native";
+import { Icon, IconName } from "../Icon/Icon";
 
-type IconDataProps = {
+type IconDataProps = TouchableOpacityProps & {
   size?: 'medium' | 'large'
-  name: "Search" | "ArrowLeft" | "AcRepair"
+  iconName:IconName,
+  description: string
 }
 
-export function Category({ name, size = 'medium' }: IconDataProps) {
+export function Category({ iconName, description, size = 'medium', ...rest }: IconDataProps) {
   return (
-    <TouchableOpacity style={styles.container} activeOpacity={0.6}>
+    <TouchableOpacity style={styles.container} activeOpacity={0.6} {...rest}>
       <View style={[styles.circle,
       {
         height: size === 'medium' ? 54 : 78,
         width: size === 'medium' ? 54 : 78,
       }
       ]}>
-        <Icon name={name} />
+       {iconName && (
+         <Icon name={iconName} size={24}/>
+       )}
       </View>
-      <Text style={styles.textCategory}>Eletronics</Text>
+      <Text style={styles.textCategory}>{description}</Text>
     </TouchableOpacity>
   )
 }

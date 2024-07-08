@@ -1,7 +1,8 @@
+import { Badge, Icon } from "@components";
 import { theme } from "@theme";
 import React from "react";
 import { View, Text, StyleSheet, FlatList, Dimensions } from "react-native";
-const {width: screenWidth} = Dimensions.get('window');
+const { width: screenWidth } = Dimensions.get('window');
 
 export function Offers() {
   return (
@@ -12,9 +13,12 @@ export function Offers() {
         data={[1, 2]}
         renderItem={({ item }) => (
           <View style={styles.promotion}>
-            <Text style={styles.text}>Offer AC Service</Text>
+            <View style={styles.headerPromotion}>
+              <Text style={styles.text}>Offer AC Service</Text>
+              <Icon name="Help" color="black_300" size={18}/>
+            </View>
             <Text style={styles.title}>Get 25%</Text>
-            <Text style={styles.text}>Grab Offer</Text>
+            <Badge description="Grab Offer" />
           </View>
         )}
       />
@@ -50,5 +54,9 @@ const styles = StyleSheet.create({
     borderRadius: theme.borderRadius.s8,
     gap: theme.spacing.s12,
     marginRight: theme.spacing.s10
+  },
+  headerPromotion: {
+    flexDirection: 'row',
+    gap: 8
   }
 })

@@ -25,6 +25,8 @@ const styles = StyleSheet.create({
     borderWidth: 1.5,
     borderColor: theme.colors.gray_200,
     flexDirection: 'row',
+    alignSelf: 'flex-start',
+    alignItems: 'center'
   },
   description: {
     color: theme.colors.gray_50,

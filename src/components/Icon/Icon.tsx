@@ -19,6 +19,8 @@ import { PhoneIcon } from 'src/assets/icons/PhoneIcon';
 import { SolIcon } from 'src/assets/icons/SolIcon';
 import { MoonIcon } from 'src/assets/icons/MoonIcon';
 import { HelpIcon } from 'src/assets/icons/HelpIcon';
+import { MenuIcon } from 'src/assets/icons/MenuIcon';
+import { ArrowDownIcon } from 'src/assets/icons/ArrowDownIcon';
 
 export interface IconBase {
   size?: number;
@@ -66,7 +68,9 @@ const iconRegistry = {
   Phone: PhoneIcon,
   Sol: SolIcon,
   Moon: MoonIcon,
-  Help: HelpIcon
+  Help: HelpIcon,
+  Menu: MenuIcon,
+  ArrowDown: ArrowDownIcon
 };
 
 type IconType = typeof iconRegistry;

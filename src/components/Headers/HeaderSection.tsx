@@ -14,7 +14,7 @@ type HeaderProps = {
 export function HeaderSection({title, hasBadge=false}: HeaderProps) {
   return (
     <View style={styles.header}>
-        <View style={{ flexDirection: 'row', gap: 10 }}>
+        <View style={{ flexDirection: 'row', gap: 10, alignItems: 'center' }}>
           <View style={styles.wrapper} />
           <Text style={styles.title}>{title}</Text>
         </View>

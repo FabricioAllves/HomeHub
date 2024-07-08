@@ -1,4 +1,4 @@
-import { Icon } from '@components';
+
 import { Feather, MaterialCommunityIcons } from '@expo/vector-icons';
 import { BottomTabNavigationProp, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { CategoriesScreen, HomeScreen, ServicesScreen } from '@screens';
@@ -7,10 +7,9 @@ import { theme } from '@theme';
 import { Platform } from 'react-native';
 
 type AppRoutes = {
-  Home: undefined;
-  Scheduless: undefined;
-  ProfileUserr: undefined
-  Meal: undefined;
+  HomeScreen: undefined,
+  CategoriesScreen: undefined,
+  ServicesScreen: undefined
 }
 
 export type AppNavigatorRoutesTabProps = BottomTabNavigationProp<AppRoutes>;
@@ -33,7 +32,7 @@ export function AppRoutes() {
       },
     }}>
       <Screen
-        name='Início'
+        name='HomeScreen'
         component={HomeScreen}
         options={{
           tabBarIcon: ({ size, color }) => (
@@ -47,7 +46,7 @@ export function AppRoutes() {
       />
 
       <Screen
-        name='Agendamentos'
+        name='Files'
         component={HomeScreen}
         options={{
           tabBarIcon: ({ size, color }) => (
@@ -61,8 +60,8 @@ export function AppRoutes() {
       />
 
       <Screen
-        name='Financeiro'
-        component={CategoriesScreen}
+        name='Categories'
+        component={HomeScreen}
         options={{
           tabBarIcon: ({ size, color }) => (
             <Feather
@@ -76,7 +75,7 @@ export function AppRoutes() {
 
       <Screen
         name='Perfil'
-        component={ServicesScreen}
+        component={HomeScreen}
         options={{
           tabBarIcon: ({ size, color }) => (
             <Feather

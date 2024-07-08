@@ -1,6 +1,5 @@
 import { createNativeStackNavigator, NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { CategoriesScreen, HomeScreen, ServicesScreen } from "@screens";
-import { AppRoutes } from "./app.tab.routes";
+import { CategoriesScreen, ServicesScreen } from "@screens";
 import { MyDrawer } from "./app.drawer.routes";
 
 type AppStack = {
@@ -17,6 +16,8 @@ export function StackRoutes() {
   return (
     <Navigator screenOptions={{ headerShown: false, animation: 'fade' }} initialRouteName="HomeScreen">
       <Screen name="HomeScreen" component={MyDrawer} />
+      <Screen name="CategoriesScreen" component={CategoriesScreen} />
+      <Screen name="ServicesScreen" component={ServicesScreen} />
     </Navigator>
   )
 }

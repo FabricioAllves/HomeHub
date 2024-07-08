@@ -9,6 +9,7 @@ import {
 
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Routes } from '@routes/index';
+import { StatusBar } from 'react-native';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -19,8 +20,14 @@ export default function App() {
     return null
   }
 
+
+
   return (
     <SafeAreaProvider>
+        <StatusBar
+  barStyle='dark-content'
+  backgroundColor='transparent'
+ />
       <Routes />
     </SafeAreaProvider>
   );

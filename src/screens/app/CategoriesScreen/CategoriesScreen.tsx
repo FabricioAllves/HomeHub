@@ -1,6 +1,6 @@
 import React from "react";
 import { View, StyleSheet, FlatList } from "react-native";
-import { Category, HeaderSection, Screen } from "@components";
+import { Category, Header, HeaderSection, Screen } from "@components";
 import { theme } from "@theme";
 
 const categoriesData = [
@@ -18,6 +18,7 @@ const categoriesData = [
 export function CategoriesScreen() {
   return (
     <Screen>
+      <Header/> 
       <View style={styles.container}>
         <HeaderSection title="All Categories" />
         <FlatList
@@ -26,7 +27,7 @@ export function CategoriesScreen() {
           numColumns={3} 
           columnWrapperStyle={styles.columnWrapper}
           renderItem={({ item }) => (
-            <Category key={item.id} size="large" name={"AcRepair"} />
+            <Category key={item.id} size="large" iconName="AcRepair" description="Eletronics" />
           )}
         />
       </View>

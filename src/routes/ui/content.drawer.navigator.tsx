@@ -13,7 +13,7 @@ type DataProps = {
 
 export const ContentDrawerNavigation = (props: DrawerContentComponentProps) => {
   const [selectedOption, setSelectedOption] = useState(0);
-  const [modeTheme, setModeTheme] = useState(false);
+  const [modeTheme, setModeTheme] = useState(true);
 
   const option: DataProps = [
     { navigate: 'Calendar', icon: 'Calendar' },
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
   header: {
     height: 100,
     alignItems: 'center',
-    marginVertical: 30,
+    marginVertical: 10,
     flexDirection: 'row',
     gap: theme.spacing.s10
   },

@@ -1,6 +1,6 @@
 import React from "react";
 import { View, StyleSheet, FlatList } from "react-native";
-import { HeaderSection, Screen } from "@components";
+import { Header, HeaderSection, Screen } from "@components";
 import { theme } from "@theme";
 import { Card } from "./components/Card";
 
@@ -15,16 +15,22 @@ import { Card } from "./components/Card";
 export function ServicesScreen() {
   return (
     <Screen>
-      <View style={styles.container}>
-        <HeaderSection title="Appliance Repair" />
-        <FlatList
-          data={[1, 2, 3, 4]}
-          renderItem={({ item }) => (
-            <Card />
-          )}
-          showsVerticalScrollIndicator={false}
-          ItemSeparatorComponent={() => <View style={styles.separator} />}
-        />
+      <Header />
+      <View style={{ backgroundColor: theme.colors.gray_200, flex: 1, gap: 24, padding: 24 }}>
+        <View style={styles.container}>
+          <HeaderSection title="Appliance Repair" />
+          <FlatList
+            data={[1, 2, 3, 4, 5, 6, 7]}
+            renderItem={({ item }) => (
+              <Card />
+            )}
+            showsVerticalScrollIndicator={false}
+            contentContainerStyle={{
+              paddingBottom: 40
+            }}
+            ItemSeparatorComponent={() => <View style={styles.separator} />}
+          />
+        </View>
       </View>
     </Screen>
   );

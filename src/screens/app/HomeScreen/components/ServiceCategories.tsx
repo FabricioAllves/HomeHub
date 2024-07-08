@@ -3,13 +3,18 @@ import { View, StyleSheet } from "react-native";
 import { Category } from "@components";
 import { theme } from "@theme";
 
+import {useNavigation} from '@react-navigation/native'
+import { AppStackNavigatorRoutesProps } from "@routes/app.stack.routes";
+
 export function ServiceCategories() {
+
+  const {navigate} = useNavigation<AppStackNavigatorRoutesProps>()
   return(
     <View style={styles.container}>
-    <Category name="AcRepair" />
-    <Category name="AcRepair" />
-    <Category name="AcRepair" />
-    <Category name="AcRepair" />
+    <Category iconName="AcRepair" description="AC Repair" onPress={() => navigate('ServicesScreen')}/>
+    <Category iconName="ArrowLeft" description="Beauty" onPress={() => navigate('ServicesScreen')}/>
+    <Category iconName="ArrowLeft" description="Appliance" onPress={() => navigate('ServicesScreen')}/>
+    <Category iconName="ArrowLeft" description="See All" onPress={() => navigate('CategoriesScreen')}/>
   </View>
   )
 }
