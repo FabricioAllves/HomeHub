@@ -3,7 +3,17 @@ import { theme } from "@theme";
 import React from "react";
 import { Image, StyleSheet, TouchableOpacity, Text, View } from "react-native";
 
-export function Card() {
+type DataProps = {
+  data: {
+    id: number;
+    stars: string;
+    service: string;
+    description: string;
+    value: string;
+  }
+}
+
+export function Card({ data }: DataProps) {
   return (
     <TouchableOpacity>
       <View style={styles.container}>
@@ -14,15 +24,15 @@ export function Card() {
           source={{ uri: 'https://www.climagel.com.br/wp-content/uploads/2017/02/c700x420-1.jpg' }}
         />
 
-        <View style={{ gap: theme.spacing.s8, justifyContent: 'space-evenly',flex: 1 }}>
+        <View style={{ gap: theme.spacing.s8, justifyContent: 'space-evenly', flex: 1 }}>
           <View style={styles.header}>
-            <Text style={styles.starTitle}>4.8</Text>
+            <Text style={styles.starTitle}>{data.stars}</Text>
             <Icon name="MoreHorizontal" />
           </View>
-          <Text style={styles.titleService}>AC Regular Service</Text>
-          <Text style={styles.description}>Starts From</Text>
+          <Text style={styles.titleService}>{data.service}</Text>
+          <Text style={styles.description}>{data.description}</Text>
           <View style={styles.containerValue}>
-            <Text style={styles.textValue}>$128</Text>
+            <Text style={styles.textValue}>{data.value}</Text>
           </View>
         </View>
       </View>
@@ -35,7 +45,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     gap: theme.spacing.s16,
-    
+
   },
   header: {
     flexDirection: 'row',

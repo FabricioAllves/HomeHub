@@ -1,14 +1,12 @@
 import React from "react";
 import { Header, Screen } from "@components";
 
-import {
-  Search,
-  Offers,
-  ServiceCategories,
-  FeaturedServices
-} from "./components";
-import { SafeAreaView, ScrollView, View } from "react-native";
+import { ScrollView } from "react-native";
 import { theme } from "@theme";
+import { Search } from "./components/Search";
+import { Offers } from "./components/Offers";
+import { ServiceCategories } from "./components/ServiceCategories";
+import { FeaturedServices } from "./components/FeaturedServices";
 
 export function HomeScreen() {
   return (

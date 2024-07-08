@@ -1,25 +1,36 @@
 import { Badge, Icon } from "@components";
 import { theme } from "@theme";
-import React from "react";
-import { View, Text, StyleSheet, FlatList, Dimensions } from "react-native";
+import { View, Text, StyleSheet, FlatList, Dimensions, TouchableOpacity } from "react-native";
 const { width: screenWidth } = Dimensions.get('window');
 
+
 export function Offers() {
+  const data = [
+    {titleOffer: 'Get 25%', categorie: 'Offer AC Service', color: '#6A9B7E50'},
+    {titleOffer: 'Get 15%', categorie: 'Offer AC Service', color: '#83C1DE50'},
+    {titleOffer: 'Get 24%', categorie: 'Offer AC Service', color: '#CABDFF50'},
+    {titleOffer: 'Get 24%', categorie: 'Offer AC Service', color: '#FFD88D50'},
+    {titleOffer: 'Get 24%', categorie: 'Offer AC Service', color: '#6A9B7E50'},
+  ]
+
   return (
     <View style={styles.container}>
       <FlatList
         showsHorizontalScrollIndicator={false}
         horizontal
-        data={[1, 2]}
+        pagingEnabled
+        snapToInterval={screenWidth * 0.68}
+        decelerationRate="fast"
+        data={data}
         renderItem={({ item }) => (
-          <View style={styles.promotion}>
+          <TouchableOpacity style={[styles.promotion, { backgroundColor: item.color }]} activeOpacity={0.7}>
             <View style={styles.headerPromotion}>
               <Text style={styles.text}>Offer AC Service</Text>
-              <Icon name="Help" color="black_300" size={18}/>
+              <Icon name="Help" color="black_300" size={18} />
             </View>
             <Text style={styles.title}>Get 25%</Text>
             <Badge description="Grab Offer" />
-          </View>
+          </TouchableOpacity>
         )}
       />
     </View>
@@ -47,7 +58,7 @@ const styles = StyleSheet.create({
   },
 
   promotion: {
-    backgroundColor: theme.colors.orange_100,
+    backgroundColor: theme.colors.orange,
     width: screenWidth * 0.68,
     padding: theme.spacing.s16,
     justifyContent: 'space-between',

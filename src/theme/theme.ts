@@ -1,18 +1,15 @@
 export const theme = {
 	colors: {
-		blue_100: '#B1E5FC',
-		green_100: '#6A9B7E',
-		green_200: '#B5EBCD',
-		green_300: '#CBEBA4',
-		orange_100: '#FFBC99', 
-    violet_100: '#AFC6FF',
-    purple_100: '#CABDFF', 
-    yellow_100: '#FFD88D', 
-    pink_100: '#F8B0ED',
-		red_100: '#FB9B9B',
+		blue: '#B1E5FC',
+		green: '#CBEBA4',
+		orange: '#FFBC99', 
+    violet: '#AFC6FF',
+    purplee: '#CABDFF', 
+    yellow: '#FFD88D', 
+    pink: '#F8B0ED',
+		red: '#FB9B9B',
 
 		purple: '#6759FF',
-
 
 		black_50: '#1A1D1F',
 		black_100: '#172B4D',

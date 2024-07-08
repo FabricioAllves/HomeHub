@@ -5,7 +5,7 @@ import { MyDrawer } from "./app.drawer.routes";
 type AppStack = {
   HomeScreen: undefined,
   CategoriesScreen: undefined,
-  ServicesScreen: undefined
+  ServicesScreen: {title?: string}
 }
 
 export type AppStackNavigatorRoutesProps = NativeStackNavigationProp<AppStack>

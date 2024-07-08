@@ -8,13 +8,13 @@ import { AppStackNavigatorRoutesProps } from "@routes/app.stack.routes";
 
 export function ServiceCategories() {
 
-  const {navigate} = useNavigation<AppStackNavigatorRoutesProps>()
+  const {navigate} = useNavigation<AppStackNavigatorRoutesProps>();
   return(
     <View style={styles.container}>
-    <Category iconName="AcRepair" description="AC Repair" onPress={() => navigate('ServicesScreen')}/>
-    <Category iconName="ArrowLeft" description="Beauty" onPress={() => navigate('ServicesScreen')}/>
-    <Category iconName="ArrowLeft" description="Appliance" onPress={() => navigate('ServicesScreen')}/>
-    <Category iconName="ArrowLeft" description="See All" onPress={() => navigate('CategoriesScreen')}/>
+    <Category iconName="AcRepair" description="AC Repair" color="violet" onPress={() => navigate('ServicesScreen', {title: "AC Repair"})}/>
+    <Category iconName="Categorie1" description="Beauty" color="pink" onPress={() => navigate('ServicesScreen', {title: "AC Repair"})}/>
+    <Category iconName="Categorie3" description="Appliance" color="orange" onPress={() => navigate('ServicesScreen', {title: "AC Repair"})}/>
+    <Category iconName="MoreHorizontal"  description="See All" color="#ECECEC" onPress={() => navigate('CategoriesScreen')}/>
   </View>
   )
 }

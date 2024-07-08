@@ -1,4 +1,4 @@
-import { theme } from "@theme";
+import { ThemeColors, theme } from "@theme";
 import React from "react";
 import { View, StyleSheet, Text, TouchableOpacity,TouchableOpacityProps } from "react-native";
 import { Icon, IconName } from "../Icon/Icon";
@@ -6,16 +6,18 @@ import { Icon, IconName } from "../Icon/Icon";
 type IconDataProps = TouchableOpacityProps & {
   size?: 'medium' | 'large'
   iconName:IconName,
-  description: string
+  description: string,
+  color: string
 }
 
-export function Category({ iconName, description, size = 'medium', ...rest }: IconDataProps) {
+export function Category({ iconName, description, size = 'medium', color, ...rest }: IconDataProps) {
   return (
     <TouchableOpacity style={styles.container} activeOpacity={0.6} {...rest}>
       <View style={[styles.circle,
       {
         height: size === 'medium' ? 54 : 78,
         width: size === 'medium' ? 54 : 78,
+        backgroundColor: color
       }
       ]}>
        {iconName && (
@@ -34,7 +36,7 @@ const styles = StyleSheet.create({
     gap: theme.spacing.s12
   },
   circle: {
-    backgroundColor: theme.colors.green_100,
+    backgroundColor: theme.colors.green,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 100

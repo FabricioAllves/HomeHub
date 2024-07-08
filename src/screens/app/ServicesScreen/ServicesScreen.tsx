@@ -3,26 +3,28 @@ import { View, StyleSheet, FlatList } from "react-native";
 import { Header, HeaderSection, Screen } from "@components";
 import { theme } from "@theme";
 import { Card } from "./components/Card";
+import { useRoute } from "@react-navigation/native";
+import { useServices } from "./useServices";
 
-// const servicesData = [
-//   { id: 1, stars: '4.8 (87)', service: "AC Check-Up", description: 'Starts From', value: '$128' },
-//   { id: 2, stars: '4.8 (87)', service: "AC Check-Up", description: 'Starts From', value: '$128' },
-//   { id: 3, stars: '4.8 (87)', service: "AC Check-Up", description: 'Starts From', value: '$128' },
-//   { id: 4, stars: '4.8 (87)', service: "AC Check-Up", description: 'Starts From', value: '$128' },
-//   { id: 5, stars: '4.8 (87)', service: "AC Check-Up", description: 'Starts From', value: '$128' },
-// ];
+type RouteParamsProps = {
+  title: string;
+}
 
 export function ServicesScreen() {
+  const {servicesData} = useServices();
+  const route = useRoute();
+  const {title} = route.params as RouteParamsProps;
+
   return (
     <Screen>
       <Header />
       <View style={{ backgroundColor: theme.colors.gray_200, flex: 1, gap: 24, padding: 24 }}>
         <View style={styles.container}>
-          <HeaderSection title="Appliance Repair" />
+          <HeaderSection title={title} />
           <FlatList
-            data={[1, 2, 3, 4, 5, 6, 7]}
+            data={servicesData}
             renderItem={({ item }) => (
-              <Card />
+              <Card data={item}/>
             )}
             showsVerticalScrollIndicator={false}
             contentContainerStyle={{

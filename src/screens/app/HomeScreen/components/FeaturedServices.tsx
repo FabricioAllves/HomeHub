@@ -1,20 +1,28 @@
 import React from "react";
 import { theme } from "@theme";
-import { View, Text, Image, StyleSheet, FlatList } from 'react-native';
-import { Badge, HeaderSection } from "@components";
+import { View, Text, Image, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
+import { HeaderSection } from "@components";
+import { useNavigation } from "@react-navigation/native";
+import { AppStackNavigatorRoutesProps } from "@routes/app.stack.routes";
 
 
 export function FeaturedServices() {
+  const { navigate } = useNavigation<AppStackNavigatorRoutesProps>()
+
   return (
     <View style={styles.container}>
-      <HeaderSection title="Cleaning Services" hasBadge/>
+      <HeaderSection title="Cleaning Services" hasBadge />
 
       <FlatList
         horizontal
         showsHorizontalScrollIndicator={false}
         data={[1, 2, 3]}
         renderItem={({ item }) => (
-          <View style={{ width: 139 }}>
+          <TouchableOpacity
+            style={{ width: 139 }}
+            activeOpacity={0.7}
+            onPress={() => navigate('ServicesScreen', {title: 'lorem'})}
+            >
             <Image
               source={{ uri: 'https://frontsaude.com/wp-content/uploads/2023/11/homem-limpeza-seu-lar-1600x1067.jpg' }}
               width={139}
@@ -22,9 +30,9 @@ export function FeaturedServices() {
               borderRadius={theme.borderRadius.s10}
             />
             <Text style={styles.descriptionService}>Home Cleaning</Text>
-          </View>
+          </TouchableOpacity>
         )}
-        contentContainerStyle={{gap:theme.spacing.s16}}
+        contentContainerStyle={{ gap: theme.spacing.s16 }}
       />
     </View>
   )

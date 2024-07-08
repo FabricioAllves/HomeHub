@@ -21,6 +21,15 @@ import { MoonIcon } from 'src/assets/icons/MoonIcon';
 import { HelpIcon } from 'src/assets/icons/HelpIcon';
 import { MenuIcon } from 'src/assets/icons/MenuIcon';
 import { ArrowDownIcon } from 'src/assets/icons/ArrowDownIcon';
+import { Categorie1Icon } from 'src/assets/icons/Categorie1Icon';
+import { Categorie2Icon } from 'src/assets/icons/Categorie2Icon';
+import { Categorie3Icon } from 'src/assets/icons/Categorie3Icon';
+import { Categorie4Icon } from 'src/assets/icons/Categorie4Icon copy';
+import { Categorie5Icon } from 'src/assets/icons/Categorie5Icon';
+import { Categorie6Icon } from 'src/assets/icons/Categorie6Icon';
+import { Categorie7Icon } from 'src/assets/icons/Categorie7Icon';
+import { Categorie8Icon } from 'src/assets/icons/Categorie8con';
+import { TrofellIcon } from 'src/assets/icons/TrofellIcon';
 
 export interface IconBase {
   size?: number;
@@ -70,7 +79,16 @@ const iconRegistry = {
   Moon: MoonIcon,
   Help: HelpIcon,
   Menu: MenuIcon,
-  ArrowDown: ArrowDownIcon
+  Trofell: TrofellIcon,
+  ArrowDown: ArrowDownIcon,
+  Categorie1: Categorie1Icon,
+  Categorie2: Categorie2Icon,
+  Categorie3: Categorie3Icon,
+  Categorie4: Categorie4Icon,
+  Categorie5: Categorie5Icon,
+  Categorie6: Categorie6Icon,
+  Categorie7: Categorie7Icon,
+  Categorie8: Categorie8Icon,
 };
 
 type IconType = typeof iconRegistry;
