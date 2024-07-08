@@ -7,9 +7,9 @@ const { width: screenWidth } = Dimensions.get('window');
 export function Offers() {
   const data = [
     {titleOffer: 'Get 25%', categorie: 'Offer AC Service', color: '#6A9B7E50'},
-    {titleOffer: 'Get 15%', categorie: 'Offer AC Service', color: '#83C1DE50'},
+    {titleOffer: 'Get 15%', categorie: 'Offer Beauty', color: '#83C1DE50'},
     {titleOffer: 'Get 24%', categorie: 'Offer AC Service', color: '#CABDFF50'},
-    {titleOffer: 'Get 24%', categorie: 'Offer AC Service', color: '#FFD88D50'},
+    {titleOffer: 'Get 24%', categorie: 'Offer Applice', color: '#FFD88D50'},
     {titleOffer: 'Get 24%', categorie: 'Offer AC Service', color: '#6A9B7E50'},
   ]
 
@@ -25,10 +25,10 @@ export function Offers() {
         renderItem={({ item }) => (
           <TouchableOpacity style={[styles.promotion, { backgroundColor: item.color }]} activeOpacity={0.7}>
             <View style={styles.headerPromotion}>
-              <Text style={styles.text}>Offer AC Service</Text>
+              <Text style={styles.text}>{item.categorie}</Text>
               <Icon name="Help" color="black_300" size={18} />
             </View>
-            <Text style={styles.title}>Get 25%</Text>
+            <Text style={styles.title}>{item.titleOffer}</Text>
             <Badge description="Grab Offer" />
           </TouchableOpacity>
         )}
