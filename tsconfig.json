@@ -9,7 +9,7 @@
       "@screens": ["src/screens"],
       "@models/*": ["./src/models"],
       "@routes/*": ["./src/routes/*"],
-      "@services/*": ["./src/services"],
+      "@services/*": ["./src/services/*"],
       "@store/*": [ "./src/store"],
       "@utils/*": ["./src/utils"],
       "@theme": ["src/theme"],
