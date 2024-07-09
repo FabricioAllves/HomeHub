@@ -1,10 +1,12 @@
-import { Icon, IconName } from '@components';
+import { Icon, IconName, ProfileInfoUser } from '@components';
 import {
   DrawerContentComponentProps,
 } from '@react-navigation/drawer';
+import { useNavigation } from '@react-navigation/native';
+import { AppStackNavigatorRoutesProps } from '@routes/app.stack.routes';
 import { theme } from '@theme';
 import { useState } from 'react';
-import { View, StyleSheet, Text, TouchableOpacity, Image } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity, Image, Pressable } from 'react-native';
 
 type DataProps = {
   navigate: string;
@@ -14,6 +16,8 @@ type DataProps = {
 export const ContentDrawerNavigation = (props: DrawerContentComponentProps) => {
   const [selectedOption, setSelectedOption] = useState(0);
   const [modeTheme, setModeTheme] = useState(true);
+
+  const {navigate} = useNavigation<AppStackNavigatorRoutesProps>();
 
   const option: DataProps = [
     { navigate: 'Calendar', icon: 'Calendar' },
@@ -26,18 +30,9 @@ export const ContentDrawerNavigation = (props: DrawerContentComponentProps) => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <Image
-          source={{ uri: 'https://github.com/FabricioAllves.png' }}
-          width={68}
-          height={68}
-          borderRadius={100}
-        />
-        <View style={{ gap: 4 }}>
-          <Text style={styles.nameUser}>Fabricio Henrique</Text>
-          <Text style={{ color: 'white' }}>lorem@gmail.com</Text>
-        </View>
-      </View>
+      <Pressable onPress={() => navigate('ProfileScreen')}>
+        <ProfileInfoUser />
+      </Pressable>
 
       <View style={{ gap: theme.spacing.s12, flex: 1 }}>
         {option.map((option, index) => (
@@ -62,8 +57,8 @@ export const ContentDrawerNavigation = (props: DrawerContentComponentProps) => {
         ))}
       </View>
       <View style={styles.footer}>
-        <View style={{flexDirection: 'row', alignItems: 'center', gap: 10}}>
-          <Icon name='Help' color='white_200' size={24}/>
+        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+          <Icon name='Help' color='white_200' size={24} />
           <Text style={styles.textMode}>Colour Scheme</Text>
         </View>
 
@@ -95,18 +90,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: theme.colors.purple,
     padding: 24,
-  },
-  header: {
-    height: 100,
-    alignItems: 'center',
-    marginVertical: 10,
-    flexDirection: 'row',
-    gap: theme.spacing.s10
-  },
-  nameUser: {
-    color: theme.colors.white_200,
-    fontFamily: theme.font.bold,
-    fontSize: 15
   },
   textButtonNavigation: {
     color: theme.colors.purple,
