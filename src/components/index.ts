@@ -5,3 +5,4 @@ export * from "./Headers/Header";
 export * from "./Headers/HeaderSection";
 export * from "./Category/Category";
 export * from "./Badge/Badge";
+export * from "./ProfileInfoUser/ProfileInfoUser";
