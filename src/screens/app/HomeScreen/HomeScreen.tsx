@@ -13,8 +13,7 @@ export function HomeScreen() {
     <Screen>
       <Header isHome />
       <ScrollView style={{
-        padding: 24,
-        backgroundColor: theme.colors.gray_200
+        padding: 24, backgroundColor: theme.colors.gray_200
       }}
         contentContainerStyle={{ gap: 20, paddingBottom: 40 }}
         showsVerticalScrollIndicator={false}

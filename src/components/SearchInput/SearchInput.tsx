@@ -26,7 +26,7 @@ export function SearchInput({
     inputRef.current?.focus();
   }
 
-  const {goBack} = useNavigation();
+  const { goBack } = useNavigation();
 
   return (
     <View style={styles.container}>

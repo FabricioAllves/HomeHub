@@ -1,11 +1,11 @@
-import { Badge, Icon } from "@components";
-import { theme } from "@theme";
 import { View, Text, StyleSheet, FlatList, Dimensions, TouchableOpacity } from "react-native";
-import { useHome } from "../useHome";
 const { width: screenWidth } = Dimensions.get('window');
+import { Badge, Icon } from "@components";
+import { useHome } from "../useHome";
+import { theme } from "@theme";
 
 export function Offers() {
-  const {data} = useHome();
+  const { data } = useHome();
 
   return (
     <View style={styles.container}>

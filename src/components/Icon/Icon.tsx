@@ -1,7 +1,7 @@
 import React from 'react';
-import {Pressable} from 'react-native';
+import { Pressable } from 'react-native';
 
-import {SearchIcon} from '../../assets/icons/SearchIcon';
+import { SearchIcon } from '../../assets/icons/SearchIcon';
 
 import { AcRepairIcon } from 'src/assets/icons/AcRepairIcon';
 import { ChevronRightIcon } from 'src/assets/icons/CheveronRightIcon';
@@ -30,6 +30,7 @@ import { Categorie6Icon } from 'src/assets/icons/Categorie6Icon';
 import { Categorie7Icon } from 'src/assets/icons/Categorie7Icon';
 import { Categorie8Icon } from 'src/assets/icons/Categorie8con';
 import { TrofellIcon } from 'src/assets/icons/TrofellIcon';
+import { ArrowRightIcon } from 'src/assets/icons/ArrowRightIcon';
 
 export interface IconBase {
   size?: number;
@@ -48,7 +49,7 @@ export function Icon({
   color = 'black_200',
   onPress,
 }: IconProps) {
-  const {colors} = useAppTheme();
+  const { colors } = useAppTheme();
   const SVGIcon = iconRegistry[name];
 
   if (onPress) {
@@ -59,7 +60,7 @@ export function Icon({
     );
   }
 
-  return <SVGIcon size={size} color={colors[color]}/>;
+  return <SVGIcon size={size} color={colors[color]} />;
 }
 
 const iconRegistry = {
@@ -80,6 +81,7 @@ const iconRegistry = {
   Help: HelpIcon,
   Menu: MenuIcon,
   Trofell: TrofellIcon,
+  ArrowRight: ArrowRightIcon,
   ArrowDown: ArrowDownIcon,
   Categorie1: Categorie1Icon,
   Categorie2: Categorie2Icon,
