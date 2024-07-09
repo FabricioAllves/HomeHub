@@ -1,7 +1,7 @@
 import { useAppTheme } from "@hooks";
 import { theme } from "@theme";
 import React from "react";
-import { View, StyleSheet, Text, Dimensions } from "react-native";
+import { View, StyleSheet, Text } from "react-native";
 import { SearchInput } from "../SearchInput/SearchInput";
 import { Icon } from "../Icon/Icon";
 import { DrawerActions, useNavigation } from "@react-navigation/native";
@@ -18,7 +18,7 @@ export function Header({ isHome = false }: HeaderProps) {
   return (
     <View style={styles.container}>
       {isHome ? (
-        <View style={{ justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row', flex: 1 }}>
+        <View style={styles.subContainer}>
           <View style={styles.wrapper}>
             <Icon name="Menu" size={32} onPress={() => navigation.dispatch(DrawerActions.openDrawer())} />
             <View style={{ justifyContent: 'center' }}>
@@ -30,9 +30,9 @@ export function Header({ isHome = false }: HeaderProps) {
             </View>
           </View>
 
-          <View style={{flexDirection: 'row', alignItems: 'center', gap: 10}}>
+          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
             <View>
-              <Text style={{color: '#FAC153', fontFamily: theme.font.bold}}>Bronze</Text>
+              <Text style={{ color: '#FAC153', fontFamily: theme.font.bold }}>Bronze</Text>
               <Text>0 Points</Text>
             </View>
             <Icon name="Trofell" />
@@ -58,6 +58,12 @@ const styles = StyleSheet.create({
     width: '100%',
     paddingHorizontal: theme.spacing.s24,
     justifyContent: 'center',
+  },
+  subContainer: {
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexDirection: 'row',
+    flex: 1
   },
   wrapper: {
     flexDirection: 'row',

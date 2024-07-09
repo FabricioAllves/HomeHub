@@ -1,11 +1,11 @@
-import { ThemeColors, theme } from "@theme";
 import React from "react";
-import { View, StyleSheet, Text, TouchableOpacity,TouchableOpacityProps } from "react-native";
+import { theme } from "@theme";
 import { Icon, IconName } from "../Icon/Icon";
+import { View, StyleSheet, Text, TouchableOpacity, TouchableOpacityProps } from "react-native";
 
 type IconDataProps = TouchableOpacityProps & {
   size?: 'medium' | 'large'
-  iconName:IconName,
+  iconName: IconName,
   description: string,
   color: string
 }
@@ -20,9 +20,9 @@ export function Category({ iconName, description, size = 'medium', color, ...res
         backgroundColor: color
       }
       ]}>
-       {iconName && (
-         <Icon name={iconName} size={24}/>
-       )}
+        {iconName && (
+          <Icon name={iconName} size={24} />
+        )}
       </View>
       <Text style={styles.textCategory}>{description}</Text>
     </TouchableOpacity>

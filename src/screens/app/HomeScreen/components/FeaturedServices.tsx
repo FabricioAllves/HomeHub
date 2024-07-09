@@ -21,8 +21,8 @@ export function FeaturedServices() {
           <TouchableOpacity
             style={{ width: 139 }}
             activeOpacity={0.7}
-            onPress={() => navigate('ServicesScreen', {title: 'lorem'})}
-            >
+            onPress={() => navigate('ServicesScreen', { title: 'Lorem Home' })}
+          >
             <Image
               source={{ uri: 'https://frontsaude.com/wp-content/uploads/2023/11/homem-limpeza-seu-lar-1600x1067.jpg' }}
               width={139}

@@ -1,17 +1,17 @@
-import { theme } from "@theme";
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { theme } from "@theme";
+import { Text, StyleSheet, TouchableOpacity } from "react-native";
 import { Icon } from "../Icon/Icon";
 
 type BadgeProps = {
   description: string;
 }
 
-export function Badge({description}:BadgeProps) {
-  return(
+export function Badge({ description }: BadgeProps) {
+  return (
     <TouchableOpacity style={styles.container}>
       <Text style={styles.description}>{description}</Text>
-      <Icon name="ChevronRight"/>
+      <Icon name="ChevronRight" />
     </TouchableOpacity>
   )
 }

@@ -4,19 +4,19 @@ import { Icon, SearchInput } from "@components";
 import { theme } from "@theme";
 
 export function Search() {
-  return(
+  return (
     <View style={styles.container}>
-        <View>
-          <Text style={styles.text}>Hello Ashfak 👋</Text>
-          <Text style={styles.title}>What you are looking for today</Text>
-        </View>
-        <SearchInput
-          placeholder="Search what you need..."
-          rightComponent={
-            <Icon name="Search" color="white_200" size={16}/>
-          }
-        />
+      <View>
+        <Text style={styles.text}>Hello Ashfak 👋</Text>
+        <Text style={styles.title}>What you are looking for today</Text>
       </View>
+      <SearchInput
+        placeholder="Search what you need..."
+        rightComponent={
+          <Icon name="Search" color="white_200" size={16} />
+        }
+      />
+    </View>
   )
 }
 

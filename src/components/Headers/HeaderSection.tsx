@@ -11,17 +11,17 @@ type HeaderProps = {
   hasBadge?: boolean
 }
 
-export function HeaderSection({title, hasBadge=false}: HeaderProps) {
+export function HeaderSection({ title, hasBadge = false }: HeaderProps) {
   return (
     <View style={styles.header}>
-        <View style={{ flexDirection: 'row', gap: 10, alignItems: 'center' }}>
-          <View style={styles.wrapper} />
-          <Text style={styles.title}>{title}</Text>
-        </View>
-        {hasBadge && (
-          <Badge description="See All" />
-        )}
+      <View style={styles.wrapperHeader}>
+        <View style={styles.wrapper} />
+        <Text style={styles.title}>{title}</Text>
       </View>
+      {hasBadge && (
+        <Badge description="See All" />
+      )}
+    </View>
   )
 }
 
@@ -38,6 +38,11 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: theme.spacing.s20
+  },
+  wrapperHeader: {
+    flexDirection: 'row',
+    gap: 10,
+    alignItems: 'center'
   },
   title: {
     fontSize: theme.fontSize.headingSmall,

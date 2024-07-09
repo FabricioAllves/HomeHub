@@ -11,25 +11,23 @@ type RouteParamsProps = {
 }
 
 export function ServicesScreen() {
-  const {servicesData} = useServices();
+  const { servicesData } = useServices();
   const route = useRoute();
-  const {title} = route.params as RouteParamsProps;
+  const { title } = route.params as RouteParamsProps;
 
   return (
     <Screen>
       <Header />
-      <View style={{ backgroundColor: theme.colors.gray_200, flex: 1, gap: 24, padding: 24 }}>
+      <View style={styles.wrapper}>
         <View style={styles.container}>
           <HeaderSection title={title} />
           <FlatList
             data={servicesData}
             renderItem={({ item }) => (
-              <Card data={item}/>
+              <Card data={item} />
             )}
             showsVerticalScrollIndicator={false}
-            contentContainerStyle={{
-              paddingBottom: 40
-            }}
+            contentContainerStyle={{ paddingBottom: 40 }}
             ItemSeparatorComponent={() => <View style={styles.separator} />}
           />
         </View>
@@ -44,6 +42,12 @@ const styles = StyleSheet.create({
     width: "100%",
     padding: theme.spacing.s16,
     borderRadius: theme.borderRadius.s8,
+  },
+  wrapper: {
+    backgroundColor: theme.colors.gray_200,
+    flex: 1,
+    gap: 24,
+    padding: 24
   },
   separator: {
     height: 1,

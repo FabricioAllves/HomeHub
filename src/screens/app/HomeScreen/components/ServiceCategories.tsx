@@ -3,19 +3,19 @@ import { View, StyleSheet } from "react-native";
 import { Category } from "@components";
 import { theme } from "@theme";
 
-import {useNavigation} from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native'
 import { AppStackNavigatorRoutesProps } from "@routes/app.stack.routes";
 
 export function ServiceCategories() {
 
-  const {navigate} = useNavigation<AppStackNavigatorRoutesProps>();
-  return(
+  const { navigate } = useNavigation<AppStackNavigatorRoutesProps>();
+  return (
     <View style={styles.container}>
-    <Category iconName="AcRepair" description="AC Repair" color="violet" onPress={() => navigate('ServicesScreen', {title: "AC Repair"})}/>
-    <Category iconName="Categorie1" description="Beauty" color="pink" onPress={() => navigate('ServicesScreen', {title: "AC Repair"})}/>
-    <Category iconName="Categorie3" description="Appliance" color="orange" onPress={() => navigate('ServicesScreen', {title: "AC Repair"})}/>
-    <Category iconName="MoreHorizontal"  description="See All" color="#ECECEC" onPress={() => navigate('CategoriesScreen')}/>
-  </View>
+      <Category iconName="AcRepair" description="AC Repair" color="violet" onPress={() => navigate('ServicesScreen', { title: "AC Repair" })} />
+      <Category iconName="Categorie1" description="Beauty" color="pink" onPress={() => navigate('ServicesScreen', { title: "AC Repair" })} />
+      <Category iconName="Categorie3" description="Appliance" color="orange" onPress={() => navigate('ServicesScreen', { title: "AC Repair" })} />
+      <Category iconName="ArrowRight" description="See All" color="#ECECEC" onPress={() => navigate('CategoriesScreen')} />
+    </View>
   )
 }
 

@@ -1,14 +1,14 @@
 import React from "react";
 import { View, StyleSheet, FlatList } from "react-native";
-import { Category, Header, HeaderSection, IconName, Screen } from "@components";
+import { Category, Header, HeaderSection, Screen } from "@components";
 import { theme } from "@theme";
 import { useNavigation } from "@react-navigation/native";
 import { AppStackNavigatorRoutesProps } from "@routes/app.stack.routes";
 import { useCategories } from "./useCategories";
 
 export function CategoriesScreen() {
-  const {navigate} = useNavigation<AppStackNavigatorRoutesProps>();
-  const {categoriesData} = useCategories();
+  const { navigate } = useNavigation<AppStackNavigatorRoutesProps>();
+  const { categoriesData } = useCategories();
 
   return (
     <Screen>
@@ -23,12 +23,12 @@ export function CategoriesScreen() {
             columnWrapperStyle={styles.columnWrapper}
             renderItem={({ item }) => (
               <Category
-              key={item.id}
-              size="large"
-              iconName={item.icon}
-              description={item.name}
-              color={item.color}
-              onPress={() => navigate('ServicesScreen', {title: item.name})}
+                key={item.id}
+                size="large"
+                iconName={item.icon}
+                description={item.name}
+                color={item.color}
+                onPress={() => navigate('ServicesScreen', { title: item.name })}
               />
             )}
           />

@@ -24,7 +24,7 @@ export function Card({ data }: DataProps) {
           source={{ uri: 'https://www.climagel.com.br/wp-content/uploads/2017/02/c700x420-1.jpg' }}
         />
 
-        <View style={{ gap: theme.spacing.s8, justifyContent: 'space-evenly', flex: 1 }}>
+        <View style={styles.wrapperCard}>
           <View style={styles.header}>
             <Text style={styles.starTitle}>{data.stars}</Text>
             <Icon name="MoreHorizontal" />
@@ -45,7 +45,11 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     gap: theme.spacing.s16,
-
+  },
+  wrapperCard: {
+    gap: theme.spacing.s8,
+    justifyContent: 'space-evenly',
+    flex: 1
   },
   header: {
     flexDirection: 'row',

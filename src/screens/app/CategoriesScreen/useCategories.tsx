@@ -1,5 +1,4 @@
 import { IconName } from "@components";
-import React from "react";
 
 type CategoryData = {
   id: number,
